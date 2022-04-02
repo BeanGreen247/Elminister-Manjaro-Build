@@ -52,7 +52,7 @@ With all that do the manual partitioning.
     * File System: ext4
     * Mount Point: /
     * FS Label: root
-    * Flags: root
+    * Flags: root, bios-grub, boot
   * click OK
   * for the swap partition it is as follows
     * Size: (pick based if VM ot not)
@@ -67,4 +67,14 @@ With all that do the manual partitioning.
     * Mount Point: /home
     * FS Label: home
     * Flags: none
+  * click OK
+Now click on Next.
 
+Next fill out all the information needed.
+* name: Thomas Mozdren
+* login: beangreen247
+* Computer Name: Elminister
+* Password: not_gonna_dox_myself
+And tick Use the same login for admin account
+
+Now click on Next and you shlould see a system summary. Click Install. If a windows pops up, click Install now.

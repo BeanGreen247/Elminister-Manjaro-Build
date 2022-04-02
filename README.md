@@ -47,19 +47,25 @@ With all that do the manual partitioning.
 * Next clik Create and create the partitions as follows
   * Change the size to the sizes calculated before
   * and pick the right flags and mount points
+  * for the EFI partition
+    * Size: 128 MiB
+    * File System: fat32
+    * Mount Point: /boot
+    * FS Label: boot
+    * Flags: bios-grub
+  * for the swap partition it is as follows
+    * Size: (pick based if VM ot not)
+    * File System: linuxswap
+    * Mount Point: none
+    * FS Label: swap
+    * Flags: swap
+  * click OK
   * for the os (root) partition it is as follows
     * Size: (pick based if VM ot not)
     * File System: ext4
     * Mount Point: /
     * FS Label: root
-    * Flags: root, bios-grub, boot
-  * click OK
-  * for the swap partition it is as follows
-    * Size: (pick based if VM ot not)
-    * File System: linuxswap
-    * Mount Point: (no mount point)
-    * FS Label: swap
-    * Flags: swap
+    * Flags: root
   * click OK
   * for the swap partition it is as follows
     * Size: (rest of the drive)

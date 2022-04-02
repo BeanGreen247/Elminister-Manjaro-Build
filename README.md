@@ -80,3 +80,7 @@ Next fill out all the information needed.
 And tick Use the same login for admin account
 
 Now click on Next and you shlould see a system summary. Click Install. If a windows pops up, click Install now.
+
+Make sure to reboot after the install has finished.
+
+## Step 2

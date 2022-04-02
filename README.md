@@ -68,6 +68,7 @@ With all that do the manual partitioning.
     * FS Label: home
     * Flags: none
   * click OK
+
 Now click on Next.
 
 Next fill out all the information needed.
@@ -75,6 +76,7 @@ Next fill out all the information needed.
 * login: beangreen247
 * Computer Name: Elminister
 * Password: not_gonna_dox_myself
+
 And tick Use the same login for admin account
 
 Now click on Next and you shlould see a system summary. Click Install. If a windows pops up, click Install now.

@@ -97,6 +97,11 @@ Open a terminal (Konsole) and type in sudo pacman -Syyuu to do a full system upd
 ## Step 3
 Install some packages (will be expanded)
 
-sudo pacman -S neofetch htop git base-devel kdevelop multilib-devel vulkan-devel jre-openjdk jre11-openjdk jre8-openjdk jdk-openjdk jdk11-openjdk jdk8-openjdk gcc glibc yay
+sudo pacman -S neofetch htop git base-devel kdevelop multilib-devel vulkan-devel jre-openjdk jre11-openjdk jre8-openjdk jdk-openjdk jdk11-openjdk jdk8-openjdk gcc glibc yay notepadqq
 
 yay -S vscode intellij-idea-community-edition
+
+quick notepadqq note
+Go to Settings > Preferences > Appearance and set Color scheme to material
+
+## Step 4

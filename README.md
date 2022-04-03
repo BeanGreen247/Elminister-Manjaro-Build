@@ -108,7 +108,9 @@ Go to Settings > Preferences > Appearance and set Color scheme to material
 Sidenote: if you install google chrome this way, it will automatically change in your taskbar, automatically replacing firefox. Oh sorry furryfox.
 
 ## Step 4
-creating the update and upgrade script
+Download and use the update script
+
+https://github.com/BeanGreen247/ArchLinuxUpdateScript
 
 ## Step 5
 insntalling discord, steam and other gaming stuff

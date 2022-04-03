@@ -113,7 +113,7 @@ And in steam add this into the launch options of each game to see if it works or
 DXVK_HUD=version,fps,gpuload %command%
 
 ## Step 7
-Remapping Home partitions
+Remapping Home dirs
 
 sudo nano ~/.config/user-dirs.dirs
 ```

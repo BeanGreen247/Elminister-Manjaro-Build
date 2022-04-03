@@ -144,3 +144,18 @@ PICTURES=/mnt/01D807332FB88CE0/Pictures
 VIDEOS=/mnt/01D807332FB88CE0/Videos
 ```
 Reboot in order for them to aplly.
+
+## Step 8
+Setting up vmware player for gaming
+```
+sudo pacman -S fuse2 gtkmm linux-headers pcsclite libcanberra
+```
+```
+yay -S --noconfirm --needed ncurses5-compat-libs
+```
+make sure to pick the right kernel headers 
+
+5.15.28-1 so at time of writing this it was option 5
+```
+yay -S --noconfirm --needed  vmware-workstation
+```

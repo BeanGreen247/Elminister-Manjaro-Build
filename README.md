@@ -68,8 +68,6 @@ Download and use the update script
 https://github.com/BeanGreen247/ArchLinuxUpdateScript
 
 ## Step 5
-SIDENOTE
-I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (TestVM.vmx) so that I can test gaming under linux using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 3GB in the settings under Display.
 
 installing discord, steam and other gaming stuff
 ```
@@ -187,4 +185,7 @@ and add this line at the end of the file
 ```
 mks.gl.allowBlacklistedDrivers = "TRUE"
 ```
+SIDENOTE
+I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (GigaChadGaming.vmx) so that I can test gaming under Windows using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 3GB in the settings under Display.
+
 Then boot up the VM.

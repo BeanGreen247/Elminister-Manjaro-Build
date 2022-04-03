@@ -177,7 +177,7 @@ Some recomendations
 * depending on how many games you are going to install, set a drive size of 256GB
 * lastly under display enable 3d acc and give it either 2 or 4GB of VMRAM
 
-Install the OS and wait untill booted to desktop, after that turn off.
+Install the OS and wait untill booted to desktop, make sure to install VMware Tools, after that turn off.
 
 Next do the following
 ```
@@ -187,3 +187,4 @@ and add this line at the end of the file
 ```
 mks.gl.allowBlacklistedDrivers = "TRUE"
 ```
+Then boot up the VM.

@@ -159,3 +159,15 @@ make sure to pick the right kernel headers
 ```
 yay -S --noconfirm --needed  vmware-workstation
 ```
+enable and start the network service
+```
+sudo systemctl enable vmware-networks.service
+sudo systemctl start vmware-networks.service
+sudo systemctl status vmware-networks.service
+```
+loading modules
+```
+sudo modprobe -a vmw_vmci vmmon
+```
+Launch VMware Player and pick non-comertial use
+

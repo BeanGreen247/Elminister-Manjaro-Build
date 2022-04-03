@@ -93,3 +93,8 @@ Make sure to reboot after the install has finished.
 Once you reboot make sure to switch Dekstop Session from Plasma (Wayland) to Plasma(X11).
 
 Open a terminal (Konsole) and type in sudo pacman -Syyuu to do a full system update and upgrade. After it is done, just reboot.
+
+## Step 3
+Install some packages (will be expanded)
+
+sudo pacman -S neofetch htop git base-devel kdevelop multilib-devel vulkan-devel jre-openjdk jre11-openjdk jre8-openjdk jdk-openjdk jdk11-openjdk jdk8-openjdk

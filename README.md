@@ -27,53 +27,7 @@ Pick the prefered timezone, Europe/Prague in my case.
 
 Pick your keyboard layout. In my case Generic 105-key PC English (US) Default.
 
-Next up Drive partitioning. Here is how I calculate it.
-* Take the toltal capacity (1TB in my case) and divide that by 6, round that up and I get 170gb for the root os (root) partition
-  * In my test VM with a 256GB Drive it is like 43GB
-* We need to convert this number to MiB so
-  * 170 GB = 162125 MiB
-  * 43 GB = 41008 MiB
-    * here is how you calcualte it
-    * take the size you want in GB and multiply it by 953.674
-    * however linux calculates it diferently, so it is 1024,023255813953
-    * 170 * 1024,023255813953 = 174083,953488372 round it up to 174084
-    * 43 * 1024,023255813953 = 44033
-* Next up is the swap partition, I usually give the same size as my system RAM, so 32GB to MiB is 30517.6 and round it up to 30518
-  * My VM has 8GB of RAM so 8GB to MiB is 8192,186046511624 and round it up to 8193
-* The rest of the drive will be left for the home partition as personal storage
-
-With all that do the manual partitioning only on the main rig. If you are using a VM, or scared of the manual part then just use Erase disk and Swap (with Hibernate).
-* Click New Partition Table and pick GPT if you have drives larger than 2TB
-* Next clik Create and create the partitions as follows
-  * Change the size to the sizes calculated before
-  * and pick the right flags and mount points
-  * for the EFI partition
-    * Size: 128 MiB
-    * File System: fat32
-    * Mount Point: /boot
-    * FS Label: boot
-    * Flags: bios-grub
-  * for the swap partition it is as follows
-    * Size: (pick based if VM ot not)
-    * File System: linuxswap
-    * Mount Point: none
-    * FS Label: swap
-    * Flags: swap
-  * click OK
-  * for the os (root) partition it is as follows
-    * Size: (pick based if VM ot not)
-    * File System: ext4
-    * Mount Point: /
-    * FS Label: root
-    * Flags: root
-  * click OK
-  * for the swap partition it is as follows
-    * Size: (rest of the drive)
-    * File System: ext4
-    * Mount Point: /home
-    * FS Label: home
-    * Flags: none
-  * click OK
+If you are using a VM, or scared of the manual part then just use Erase disk and Swap (with Hibernate).
 
 Now click on Next.
 
@@ -129,7 +83,7 @@ Open steam and go to Steam >> Settings >> Steam Play >> Enable Steam Play for al
 
 Make sure to reboot
 
-## Step 6
+## Step 6 (needs some work)
 DXVK stuff
 
 sudo pacman -S vulkan-radeon lib32-vulkan-radeon amdvlk lib32-amdvlk vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers lib32-vulkan-mesa-layers
@@ -157,3 +111,28 @@ everything in /home/beangreen247/Downloads/dxvk-version/x64/ into here /home/bea
 And in steam add this into the launch options of each game to see if it works or not
 
 DXVK_HUD=version,fps,gpuload %command%
+
+## Step 7
+Remapping Home partitions
+
+sudo nano ~/.config/user-dirs.dirs
+
+XDG_DESKTOP_DIR="/mnt/01D807332FB88CE0/Desktop"
+XDG_DOWNLOAD_DIR="/mnt/01D807332FB88CE0/Downloads"
+XDG_TEMPLATES_DIR="$HOME/Templates"
+XDG_PUBLICSHARE_DIR="$HOME/Public"
+XDG_DOCUMENTS_DIR="/mnt/01D807332FB88CE0/Documents"
+XDG_MUSIC_DIR="/mnt/01D807332FB88CE0/Music"
+XDG_PICTURES_DIR="/mnt/01D807332FB88CE0/Pictures"
+XDG_VIDEOS_DIR="/mnt/01D807332FB88CE0/Videos"
+
+sudo nano /etc/xdg/user-dirs.defaults
+
+DESKTOP=/mnt/01D807332FB88CE0/Desktop
+DOWNLOAD=/mnt/01D807332FB88CE0/Downloads
+TEMPLATES=Templates
+PUBLICSHARE=Public
+DOCUMENTS=/mnt/01D807332FB88CE0/Documents
+MUSIC=/mnt/01D807332FB88CE0/Music
+PICTURES=/mnt/01D807332FB88CE0/Pictures
+VIDEOS=/mnt/01D807332FB88CE0/Videos

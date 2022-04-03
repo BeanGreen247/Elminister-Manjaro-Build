@@ -83,7 +83,9 @@ sudo pacman -Sy wine-staging giflib lib32-giflib libpng lib32-libpng libldap lib
 yay -S dxvk-bin
 ```
 Open steam and go to Steam >> Settings >> Steam Play >> Enable Steam Play for all titles and leave Proton Experimental
-
+```
+sudo pacman -S gamemode
+```
 Make sure to reboot
 
 ## Step 6 (needs some work)

@@ -42,7 +42,7 @@ Next up Drive partitioning. Here is how I calculate it.
   * My VM has 8GB of RAM so 8GB to MiB is 8192,186046511624 and round it up to 8193
 * The rest of the drive will be left for the home partition as personal storage
 
-With all that do the manual partitioning only on the main rig. If you are using a VM, or scared of the manual part then just use Erase disk.
+With all that do the manual partitioning only on the main rig. If you are using a VM, or scared of the manual part then just use Erase disk and Swap (with Hibernate).
 * Click New Partition Table and pick GPT if you have drives larger than 2TB
 * Next clik Create and create the partitions as follows
   * Change the size to the sizes calculated before

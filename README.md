@@ -174,7 +174,8 @@ Close it and run it with sudo
 sudo vmplayer
 ```
 Some recomendations
-* give it as many CPU cores as you can in my case 12 (12 threads)
+* do not give it as many CPU cores as you can in my case 12 (12 threads)
+  * make sure to keep at least 4 cores (4 threads)
 * at least 8 or 16GB of RAM
 * depending on how many games you are going to install, set a drive size of 256GB
 * lastly under display enable 3d acc and give it either 2 or 4GB of VMRAM

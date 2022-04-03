@@ -97,7 +97,7 @@ Open a terminal (Konsole) and type in sudo pacman -Syyuu to do a full system upd
 ## Step 3
 Install some packages (will be expanded)
 
-sudo pacman -S neofetch htop git base-devel kdevelop multilib-devel vulkan-devel jre-openjdk jre11-openjdk jre8-openjdk jdk-openjdk jdk11-openjdk jdk8-openjdk gcc glibc yay notepadqq
+sudo pacman -S neofetch htop git base-devel kdevelop multilib-devel vulkan-devel jre-openjdk jre11-openjdk jre8-openjdk jdk-openjdk jdk11-openjdk jdk8-openjdk gcc glibc yay notepadqq obs-studio
 
 yay -S vscode intellij-idea-community-edition google-chrome
 

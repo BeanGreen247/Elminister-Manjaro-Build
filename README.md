@@ -169,6 +169,10 @@ sudo modprobe -a vmw_vmci vmmon
 ```
 Launch VMware Player and pick non-comertial use
 
+Close it and run it with sudo
+```
+sudo vmplayer
+```
 Some recomendations
 * give it as many CPU cores as you can in my case 12 (12 threads)
 * at least 8 or 16GB of RAM
@@ -187,5 +191,10 @@ mks.gl.allowBlacklistedDrivers = "TRUE"
 ```
 SIDENOTE
 I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (GigaChadGaming.vmx) so that I can test gaming under Windows using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 3GB in the settings under Display.
+
+Passthrough of full drive
+Go into settings of the VM click on Add, Hard Disk, NVMe, Use a physical disk, Pick the HDD and use etire disk and click on Next till done.
+
+Click on Save.
 
 Then boot up the VM.

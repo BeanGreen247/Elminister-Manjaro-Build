@@ -108,4 +108,7 @@ Go to Settings > Preferences > Appearance and set Color scheme to material
 Sidenote: if you install google chrome this way, it will automatically change in your taskbar, automatically replacing firefox. Oh sorry furryfox.
 
 ## Step 4
-some stuff
+creating the update and upgrade script
+
+## Step 5
+insntalling discord, steam and other gaming stuff

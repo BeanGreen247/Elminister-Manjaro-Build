@@ -90,3 +90,6 @@ Now click on Next and you shlould see a system summary. Click Install. If a wind
 Make sure to reboot after the install has finished.
 
 ## Step 2
+Once you reboot make sure to switch from Wayland to X11.
+
+Open a terminal (Konsole) and type in sudo pacman -Syyuu to do a full system update and upgrade. After it is done, just reboot.

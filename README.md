@@ -132,6 +132,10 @@ Make sure to reboot
 ## Step 6
 DXVK stuff
 
+sudo pacman -S vulkan-radeon lib32-vulkan-radeon amdvlk lib32-amdvlk vulkan-icd-loader lib32-vulkan-icd-loader 
+
+//this is for AMD GPUs for more go here https://wiki.archlinux.org/title/Vulkan#Installation
+
 https://github.com/doitsujin/dxvk/releases download the latest .tar.gz and extract it to your downloads folder
 
 next open two or three file explorers and open the dxvk folder in one and open these two dirs next

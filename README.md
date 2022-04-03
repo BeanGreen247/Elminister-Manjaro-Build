@@ -132,7 +132,7 @@ Make sure to reboot
 ## Step 6
 DXVK stuff
 
-sudo pacman -S vulkan-radeon lib32-vulkan-radeon amdvlk lib32-amdvlk vulkan-icd-loader lib32-vulkan-icd-loader 
+sudo pacman -S vulkan-radeon lib32-vulkan-radeon amdvlk lib32-amdvlk vulkan-icd-loader lib32-vulkan-icd-loader vulkan-mesa-layers lib32-vulkan-mesa-layers
 
 //this is for AMD GPUs for more go here https://wiki.archlinux.org/title/Vulkan#Installation
 

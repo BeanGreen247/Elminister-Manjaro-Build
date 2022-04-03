@@ -116,7 +116,7 @@ DXVK_HUD=version,fps,gpuload %command%
 Remapping Home partitions
 
 sudo nano ~/.config/user-dirs.dirs
-
+```
 XDG_DESKTOP_DIR="/mnt/01D807332FB88CE0/Desktop"
 XDG_DOWNLOAD_DIR="/mnt/01D807332FB88CE0/Downloads"
 XDG_TEMPLATES_DIR="$HOME/Templates"
@@ -125,9 +125,9 @@ XDG_DOCUMENTS_DIR="/mnt/01D807332FB88CE0/Documents"
 XDG_MUSIC_DIR="/mnt/01D807332FB88CE0/Music"
 XDG_PICTURES_DIR="/mnt/01D807332FB88CE0/Pictures"
 XDG_VIDEOS_DIR="/mnt/01D807332FB88CE0/Videos"
-
+```
 sudo nano /etc/xdg/user-dirs.defaults
-
+```
 DESKTOP=/mnt/01D807332FB88CE0/Desktop
 DOWNLOAD=/mnt/01D807332FB88CE0/Downloads
 TEMPLATES=Templates
@@ -136,3 +136,4 @@ DOCUMENTS=/mnt/01D807332FB88CE0/Documents
 MUSIC=/mnt/01D807332FB88CE0/Music
 PICTURES=/mnt/01D807332FB88CE0/Pictures
 VIDEOS=/mnt/01D807332FB88CE0/Videos
+```

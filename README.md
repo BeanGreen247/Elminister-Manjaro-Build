@@ -137,3 +137,4 @@ MUSIC=/mnt/01D807332FB88CE0/Music
 PICTURES=/mnt/01D807332FB88CE0/Pictures
 VIDEOS=/mnt/01D807332FB88CE0/Videos
 ```
+Reboot in order for them to aplly.

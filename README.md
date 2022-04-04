@@ -217,8 +217,36 @@ numa.autosize.vcpu.maxPerVirtualNode = "finalN"
 Then boot up the VM.
 
 ## TODO
-* figure out increasing gpu usage/utilization
+* ~~figure out increasing gpu usage/utilization~~
 * add d3d12/dx12 support from GPU
-* preformance improvements in general
+* ~~preformance improvements in general~~
 
+# Some scripts
+cpu-pinning.sh
+```bash
+# force linux to use only all cpus exect for 10,11 (11,12)
+taskset -c 2-10 /usr/lib/vmware/bin/vmware-vmx
+systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
+systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
+systemctl set-property --runtime -- init.slice AllowedCPUs=0-11
+```
+to run use sudo for root access
 
+cpu-relsease.sh
+```bash
+# force linux to use whole cpu
+taskset -c 1-12 /usr/lib/vmware/bin/vmware-vmx
+systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
+systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
+systemctl set-property --runtime -- init.slice AllowedCPUs=0-11
+```
+to run use sudo for root access
+
+performance-mode.sh
+```bash
+#!/bin/bash
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo "performance" > $file; done
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+```
+to run use sudo for root access

@@ -250,3 +250,11 @@ for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo "perf
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 to run use sudo for root access
+
+Some info
+* cpu-pinning.sh - make sure to run before launching the VM
+* cpu-relsease.sh - run after closing/killing the VM
+* performance-mode.sh - to enable performace cpu governor
+
+## what is next?
+we will look into more performace improvements and tweaks, this VM is used for video editing and gaming if the game is proprietary and has anticheat software or drm built in.

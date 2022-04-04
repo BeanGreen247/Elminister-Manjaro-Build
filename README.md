@@ -215,3 +215,10 @@ cpuid.coresPerSocket = "finalN"
 numa.autosize.vcpu.maxPerVirtualNode = "finalN"
 
 Then boot up the VM.
+
+## TODO
+* figure out increasing gpu usage/utilization
+* add d3d12/dx12 support from GPU
+* preformance improvements in general
+
+

@@ -206,4 +206,10 @@ cpuid.coresPerSocket = "1"
 
 numa.autosize.vcpu.maxPerVirtualNode = "11"
 
+To calculate do numOfThreads -1 = finalN, so in my case it is 12 - 1 = 11 and put the finalN as so
+
+numvcpus = "finalN"
+
+numa.autosize.vcpu.maxPerVirtualNode = "finalN"
+
 Then boot up the VM.

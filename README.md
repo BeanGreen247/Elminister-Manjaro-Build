@@ -191,10 +191,10 @@ and add this line at the end of the file
 mks.gl.allowBlacklistedDrivers = "TRUE"
 ```
 SIDENOTE
-I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (GigaChadGaming.vmx) so that I can test gaming under Windows using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 3GB in the settings under Display.
+I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (GigaChadGaming.vmx) so that I can test gaming under Windows using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 4GB in the settings under Display.
 
 Passthrough of full drive
-Go into settings of the VM click on Add, Hard Disk, NVMe, Use a physical disk, Pick the HDD and use etire disk and click on Next till done.
+Go into settings of the VM click on Add, Hard Disk, NVMe, Use a physical disk, Pick the HDD and use etire disk and click on Next till done. Make sure it does not automount under linux, can be done via gnome-disk-utility.
 
 Click on Save.
 

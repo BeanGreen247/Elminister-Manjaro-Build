@@ -219,7 +219,8 @@ Then boot up the VM.
 ## TODO
 * ~~figure out increasing gpu usage/utilization~~
 * add d3d12/dx12 support from GPU
-* ~~preformance improvements in general~~
+* fix opengl performance
+* preformance improvements in general
 
 # Some scripts
 cpu-pinning.sh

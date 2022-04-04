@@ -200,8 +200,10 @@ Click on Save.
 
 next set cpu affinity like so in the .vmx file and add these to the bottom of the file
 
-numvcpus = "6" - you may need to remove the original line
+numvcpus = "11" - you may need to remove the original line
 
-cpuid.coresPerSocket = "3"
+cpuid.coresPerSocket = "1"
+
+numa.autosize.vcpu.maxPerVirtualNode = "11"
 
 Then boot up the VM.

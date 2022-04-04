@@ -202,13 +202,15 @@ next set cpu affinity like so in the .vmx file and add these to the bottom of th
 
 numvcpus = "11" - you may need to remove the original line
 
-cpuid.coresPerSocket = "1"
+cpuid.coresPerSocket = "11"
 
 numa.autosize.vcpu.maxPerVirtualNode = "11"
 
 To calculate do numOfThreads -1 = finalN, so in my case it is 12 - 1 = 11 and put the finalN as so
 
 numvcpus = "finalN"
+
+cpuid.coresPerSocket = "finalN"
 
 numa.autosize.vcpu.maxPerVirtualNode = "finalN"
 

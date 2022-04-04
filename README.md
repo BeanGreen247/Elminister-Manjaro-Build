@@ -198,4 +198,10 @@ Go into settings of the VM click on Add, Hard Disk, NVMe, Use a physical disk, P
 
 Click on Save.
 
+next set cpu affinity like so in the .vmx file and add these to the bottom of the file
+
+numvcpus = "6" - you may need to remove the original line
+
+cpuid.coresPerSocket = "3"
+
 Then boot up the VM.

@@ -147,7 +147,7 @@ Apply my custom zshrc file and set the blue color scheme https://github.com/Bean
 
 Open Konsole and go to Settings and untick Main Toolbar and Session Toolbar under Toolbars Shown for a clean look.
 
-sudo nano ~/.tmux.conf
+nano ~/.tmux.conf
 ```
 set-option -g default-shell /bin/zsh
 ```

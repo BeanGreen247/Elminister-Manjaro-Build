@@ -141,6 +141,9 @@ VIDEOS=/mnt/01D807332FB88CE0/Videos
 Reboot in order for them to aplly.
 
 ## Step 8
+Apply my custom zshrc file and set the blue color scheme https://github.com/BeanGreen247/zsh-config
+
+## Step 9
 Setting up vmware player for gaming
 ```
 sudo pacman -S fuse2 gtkmm linux-headers pcsclite libcanberra

@@ -152,85 +152,6 @@ nano ~/.tmux.conf
 set-option -g default-shell /bin/zsh
 ```
 
-## Step 9
-Setting up vmware player for gaming
-```
-sudo pacman -S fuse2 gtkmm linux-headers pcsclite libcanberra
-```
-```
-yay -S --noconfirm --needed ncurses5-compat-libs
-```
-make sure to pick the right kernel headers 
-
-5.15.28-1 so at time of writing this it was option 5
-```
-yay -S --noconfirm --needed  vmware-workstation
-```
-enable and start the network service
-```
-sudo systemctl enable vmware-networks.service
-sudo systemctl start vmware-networks.service
-sudo systemctl status vmware-networks.service
-```
-loading modules
-```
-sudo modprobe -a vmw_vmci vmmon
-```
-Launch VMware Player and pick non-comertial use
-
-Close it and run it with sudo
-```
-sudo vmplayer
-```
-Some recomendations
-* do not give it as many CPU cores as you can in my case 12 (12 threads)
-  * make sure to keep at least 4 cores (4 threads)
-* at least 8 or 16GB of RAM
-* depending on how many games you are going to install, set a drive size of 256GB
-* lastly under display enable 3d acc and give it either 2 or 4GB of VMRAM
-
-Install the OS and wait untill booted to desktop, make sure to install VMware Tools, after that turn off.
-
-Next do the following
-```
-nano .vmware/preferences
-```
-and add this line at the end of the file
-```
-mks.gl.allowBlacklistedDrivers = "TRUE"
-```
-SIDENOTE
-I added this line `mks.gl.allowBlacklistedDrivers = "TRUE"` into the .vmx file if my VMware VM (GigaChadGaming.vmx) so that I can test gaming under Windows using my GPU. Also make sure to define the amount of VRAM that will be usable, I gave it 4GB in the settings under Display.
-
-Passthrough of full drive
-Go into settings of the VM click on Add, Hard Disk, NVMe, Use a physical disk, Pick the HDD and use etire disk and click on Next till done. Make sure it does not automount under linux, can be done via gnome-disk-utility.
-
-Click on Save.
-
-next set cpu affinity like so in the .vmx file and add these to the bottom of the file
-
-numvcpus = "11" - you may need to remove the original line
-
-cpuid.coresPerSocket = "11"
-
-numa.autosize.vcpu.maxPerVirtualNode = "11"
-
-To calculate do numOfThreads -1 = finalN, so in my case it is 12 - 1 = 11 and put the finalN as so
-
-numvcpus = "finalN"
-
-cpuid.coresPerSocket = "finalN"
-
-numa.autosize.vcpu.maxPerVirtualNode = "finalN"
-
-Then boot up the VM.
-
-## TODO
-* ~~figure out increasing gpu usage/utilization~~
-* add d3d12/dx12 support from GPU
-* fix opengl performance
-* preformance improvements in general
-
 # Some scripts
 cpu-pinning.sh
 ```bash
@@ -268,3 +189,8 @@ Some info
 
 ## what is next?
 we will look into more performace improvements and tweaks, this VM is used for video editing and gaming if the game is proprietary and has anticheat software or drm built in.
+
+## Step 9
+virtio/kvm gaming VM
+
+to be done

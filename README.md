@@ -65,7 +65,12 @@ Download and use the update script
 https://github.com/BeanGreen247/ArchLinuxUpdateScript
 
 ## Step 5
-
+installing ssh stuff
+```
+sudo pacman -S openssh
+sudo systemctl enable sshd
+sudo systemctl start sshd
+```
 installing discord, steam and other gaming stuff
 ```
 sudo pacman -S steam discord --noconfirm

@@ -181,8 +181,6 @@ cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 to run use sudo for root access
 
 Some info
-* cpu-pinning.sh - make sure to run before launching the VM
-* cpu-relsease.sh - run after closing/killing the VM
 * performance-mode.sh - to enable performace cpu governor
 
 ## what is next?

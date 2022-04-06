@@ -70,6 +70,19 @@ installing ssh stuff
 sudo pacman -S openssh
 sudo systemctl enable sshd
 sudo systemctl start sshd
+sudo cp /etc/ssh/sshd_config ~/ssh_config_backup
+```
+```
+sudo nano /etc/ssh/sshd_config
+```
+uncomment these two lines and add your ip, can be found using ip addr
+```
+Port 22
+AddressFamily any
+ListenAddress 192.168.1.115
+```
+```
+sudo systemctl restart sshd
 ```
 installing discord, steam and other gaming stuff
 ```

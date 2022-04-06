@@ -153,26 +153,6 @@ set-option -g default-shell /bin/zsh
 ```
 
 # Some scripts
-cpu-pinning.sh
-```bash
-# force linux to use only all cpus exect for 10,11 (11,12)
-taskset -c 2-10 /usr/lib/vmware/bin/vmware-vmx
-systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
-systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
-systemctl set-property --runtime -- init.slice AllowedCPUs=0-11
-```
-to run use sudo for root access
-
-cpu-relsease.sh
-```bash
-# force linux to use whole cpu
-taskset -c 1-12 /usr/lib/vmware/bin/vmware-vmx
-systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
-systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
-systemctl set-property --runtime -- init.slice AllowedCPUs=0-11
-```
-to run use sudo for root access
-
 performance-mode.sh
 ```bash
 #!/bin/bash
@@ -194,3 +174,4 @@ we will look into more performace improvements and tweaks, this VM is used for v
 virtio/kvm gaming VM
 
 to be done
+soon

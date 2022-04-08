@@ -611,12 +611,12 @@ echo 0 > /sys/class/vtconsole/vtcon1/bind
 echo efi-framebuffer.0 > /sys/bus/platform/drivers/efi-framebuffer/unbind
 
 # Avoid a Race condition by waiting 10 seconds. This can be calibrated to be shorter or longer if required for your system
-sleep 30
+sleep 10
 
 # Unload AMD modules
 modprobe -r amdgpu
-modprobe -r snd_hda_intel
-modprobe -r xhci_hcd
+#modprobe -r snd_hda_intel
+#modprobe -r xhci_hcd
 
 # Unbind the GPU from display driver
 virsh nodedev-detach pci_0000_01_00_0
@@ -660,8 +660,8 @@ echo "efi-framebuffer.0" > /sys/bus/platform/drivers/efi-framebuffer/bind
 
 # Reload AMD modules
 modprobe amdgpu
-modprobe snd_hda_intel
-modprobe xhci_hcd
+#modprobe snd_hda_intel
+#modprobe xhci_hcd
 
 # Restart Display Manager
 systemctl start sddm.service

@@ -192,3 +192,7 @@ virtio/kvm gaming VM
 to be done
 soon
 very soon
+
+sidenote to self to add notes in VM notes
+
+make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support bro

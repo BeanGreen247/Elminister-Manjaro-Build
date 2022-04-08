@@ -67,9 +67,10 @@ https://github.com/BeanGreen247/ArchLinuxUpdateScript
 ## Step 5
 installing ssh stuff (needs configuring, not done yet)
 ```
-sudo pacman -S openssh
+sudo pacman -S openssh ufw
 sudo systemctl enable sshd
 sudo systemctl start sshd
+sudo ufw allow ssh
 sudo cp /etc/ssh/sshd_config ~/ssh_config_backup
 ```
 ```

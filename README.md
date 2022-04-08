@@ -935,6 +935,7 @@ Connection successful
 [CHG] Device 14:3F:A6:31:FF:10 ServicesResolved: yes
 [WF-1000XM3]# exit
 ```
+For more information go here https://wiki.archlinux.org/title/bluetooth_headset#Headset_via_Bluez5/PulseAudio
 
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that

@@ -264,44 +264,46 @@ i will be getting a spare ssd at some point so i will reinstall windows onto the
 once it is finished with the install you want to trun it off
 
 next go into overview and click the xml tab
-  in here do the following
-    replace
-    ```
-     <cpu mode="host-passthrough" check="none" migratable="on"/>
-    ```
-    with
-    ```
-     <cpu mode="host-passthrough" check="none" migratable="on">
-      <topology sockets="1" dies="1" cores="4" threads="2"/>
-      <feature policy='disable' name='hypervisor'/>
-     </cpu>
-    ```
-    next find hyperv section
-    ```
-        <hyperv mode="custom">
-         <relaxed state="on"/>
-         <vapic state="on"/>
-         <spinlocks state="on" retries="8191"/>
-        </hyperv>
-    ```
-    and replace it with this below
-    ```
-    <hyperv mode="custom">
-      <relaxed state="on"/>
-      <vapic state="on"/>
-      <spinlocks state="on" retries="8191"/>
-      <vpindex state="on"/>
-      <runtime state="on"/>
-      <synic state="on"/>
-      <stimer state="on"/>
-      <reset state="on"/>
-      <vendor_id state="on" value="randomid"/>
-      <frequencies state="on"/>
-    </hyperv>
-    ```
-    next boot the vm up and let it update and while we are there go to control panel, add or remove programs and click on Turn windows features on or off and you want to tick Hyper-V and enable everything in there and click ok
+
+in here do the following
+
+replace
+```
+<cpu mode="host-passthrough" check="none" migratable="on"/>
+```
+with
+```
+<cpu mode="host-passthrough" check="none" migratable="on">
+ <topology sockets="1" dies="1" cores="4" threads="2"/>
+ <feature policy='disable' name='hypervisor'/>
+</cpu>
+```
+next find hyperv section
+```
+<hyperv mode="custom">
+ <relaxed state="on"/>
+ <vapic state="on"/>
+ <spinlocks state="on" retries="8191"/>
+</hyperv>
+```
+and replace it with this below
+```
+<hyperv mode="custom">
+  <relaxed state="on"/>
+  <vapic state="on"/>
+  <spinlocks state="on" retries="8191"/>
+  <vpindex state="on"/>
+  <runtime state="on"/>
+  <synic state="on"/>
+  <stimer state="on"/>
+  <reset state="on"/>
+  <vendor_id state="on" value="randomid"/>
+  <frequencies state="on"/>
+</hyperv>
+```
+next boot the vm up and let it update and while we are there go to control panel, add or remove programs and click on Turn windows features on or off and you want to tick Hyper-V and enable everything in there and click ok
     
-   make sure to apply all the updates by rebooting after it finishes make sure to check cpu stas and then power off
+make sure to apply all the updates by rebooting after it finishes make sure to check cpu stas and then power off
 
 next up iommu grouping
 ```

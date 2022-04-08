@@ -851,6 +851,91 @@ You may need to change the XML based on your topology
 
 now try and test it
 
+## Step 10
+Bluetooth stuff
+
+Install packages
+```
+sudo pacman -S pulseaudio-bluetooth pulseaudio-alsa bluez-utils
+```
+Enable and start bluetooth
+```
+sudo systemctl enable bluetooth.service
+sudo systemctl restart bluetooth.service
+```
+Setting up auto connection
+To make your headset auto connect you need to enable PulseAudio's switch-on-connect module. Do this by adding the following lines to `/etc/pulse/default.pa`:
+```
+### Automatically switch to newly-connected devices
+load-module module-switch-on-connect
+```
+And add these lines into `/etc/bluetooth/main.cf`
+```
+AutoEnable=true
+```
+Next restart bluetooth service
+```
+systemctl restart bluetooth
+```
+Next run `bluetoothctl`
+
+Note: Here I am showing how I paired and connected my [Sony WF-1000XM3s](https://electronics.sony.com/audio/headphones/truly-wireless/p/wf1000xm3-b)
+
+Great ones btw.
+
+```
+Agent registered
+[LE_WF-1000XM3]# power on
+Changing power on succeeded
+[LE_WF-1000XM3]# agent on
+Agent is already registered
+[LE_WF-1000XM3]# default-agent
+Default agent request successful
+[bluetooth]# scan on
+Discovery started
+[bluetooth]# pair 14:3F:A6:31:FF:10 
+Attempting to pair with 14:3F:A6:31:FF:10
+[CHG] Device 14:3F:A6:31:FF:10 Name: WF-1000XM3
+[CHG] Device 14:3F:A6:31:FF:10 Alias: WF-1000XM3
+Pairing successful
+[CHG] Device 14:3F:A6:31:FF:10 ServicesResolved: no
+[LE_WF-1000XM3]# connect 14:3F:A6:31:FF:10
+Attempting to connect to 14:3F:A6:31:FF:10
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 00000000-deca-fade-deca-deafdecacaff
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 00000709-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 00001108-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 0000110b-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 0000110c-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 0000110e-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 0000111e-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 00001200-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 00001800-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 0000fe03-0000-1000-8000-00805f9b34fb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 55f80aef-d89f-41a4-9e36-0ffc88dc81ce
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 5b833e05-6bc7-4802-8e9a-723ceca4bd8f
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 5b833e06-6bc7-4802-8e9a-723ceca4bd8f
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 67a846ad-de3e-451b-a6d8-7b2899ca2370
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 81c2e72a-0591-443e-a1ff-05f988593351
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 8901dfa8-5c7e-4d8f-9f0c-c2b70683f5f0
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 91c10d9c-aaef-42bd-b6d6-8a648c19213d
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 931c7e8a-540f-4686-b798-e8df0a2ad9f7
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: 96cc203e-5068-46ad-b32d-e316f5e069ba
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: b9b213ce-eeab-49e4-8fd9-aa478ed1b26b
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: dc405470-a351-4a59-97d8-2e2e3b207fbb
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: f8d1fbe4-7966-4334-8024-ff96c9330e15
+[CHG] Device 14:3F:A6:31:FF:10 UUIDs: fe59bfa8-7fe3-4a05-9d94-99fadc69faff
+[CHG] Device 14:3F:A6:31:FF:10 ServicesResolved: yes
+Connection successful
+[CHG] Device 14:3F:A6:31:FF:10 ServicesResolved: no
+[WF-1000XM3]# trust 14:3F:A6:31:FF:10
+Changing 14:3F:A6:31:FF:10 trust succeeded
+[WF-1000XM3]# connect 14:3F:A6:31:FF:10
+Attempting to connect to 14:3F:A6:31:FF:10
+Connection successful
+[CHG] Device 14:3F:A6:31:FF:10 ServicesResolved: yes
+[WF-1000XM3]# exit
+```
+
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
 * make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support

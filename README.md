@@ -857,3 +857,6 @@ now try and test it
 * to be able to talk with the boys on discord i will pass a heaset/mic combo via usb
 * also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux, i use a wireless keyboard and mouse with 2 wireless receivers, one per dev
 * also gpu audio work flawlessly
+
+## Final words
+So to make a summary, well, it took some time to get right, but that is my config, all the apps, scripts and tools that I installed and set up let me use my PC as a Gaming rig or a Workstation power house. However this config may not work for everyone, so make sure to do your own research, just in case. This is meant to be a template, not a final solution, but here might be some things that may end up working for you. I also custom built ffmpeg, but I am not sure if I should include it, in this build. I might at a later date.

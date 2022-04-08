@@ -65,7 +65,7 @@ Download and use the update script
 https://github.com/BeanGreen247/ArchLinuxUpdateScript
 
 ## Step 5
-installing ssh stuff
+installing ssh stuff (needs configuring, not done yet)
 ```
 sudo pacman -S openssh
 sudo systemctl enable sshd

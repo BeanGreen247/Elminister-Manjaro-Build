@@ -69,7 +69,9 @@ installing ssh stuff (needs configuring, not done yet)
 ```
 sudo pacman -S openssh ufw
 sudo systemctl enable sshd
+sudo systemctl enable ufw
 sudo systemctl start sshd
+sudo systemctl start ufw
 sudo ufw allow ssh
 sudo cp /etc/ssh/sshd_config ~/ssh_config_backup
 ```

@@ -858,6 +858,7 @@ now try and test it
 * after all that make a copt of the VM, so that if something goes wrong, you have something to restore from
 * to be able to talk with the boys on discord i will pass a heaset/mic combo via usb
 * also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux, i use a wireless keyboard and mouse with 2 wireless receivers, one per dev
+    *  I should mention that I just recently switched to a wireless keyboard and mouse and it unhooks from linux and rehooks in the VM flawlessly so I do not need a spare keyboard and mouse, just wanted to mention it
 * also gpu audio work flawlessly
 * also passing a usb bluetooth adapter works along with paring with something like headphones or a headset or smartphone
 

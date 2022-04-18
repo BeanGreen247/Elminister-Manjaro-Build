@@ -946,8 +946,8 @@ For more information go here https://wiki.archlinux.org/title/bluetooth_headset#
 * make sure to reboot the vm
 * after all that make a copy of the VM, so that if something goes wrong, you have something to restore from
 * to be able to talk with the boys on discord i have passed a heaset/mic combo via a usb bluetooth adapter
-* also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux, i use a wireless keyboard and mouse with 2 wireless receivers, one per dev
-    *  I should mention that I just recently switched to a wireless keyboard and mouse and it unhooks from linux and rehooks in the VM flawlessly so I do not need a spare keyboard and mouse, just wanted to mention it
+* ~~also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux,~~ i use a wireless keyboard and mouse with 2 wireless receivers, one per dev
+    *  I should mention that I just recently switched to a wireless keyboard and mouse and it unhooks from linux and rehooks in the VM flawlessly
 * also gpu audio work flawlessly
 * also passing a usb bluetooth adapter works along with paring with something like headphones or a headset or smartphone
 * [4/18/2022] I got s usb sound card that works in both linux and windows, so I just pass it to the VM so I can use my headphones and mic

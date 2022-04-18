@@ -950,6 +950,7 @@ For more information go here https://wiki.archlinux.org/title/bluetooth_headset#
     *  I should mention that I just recently switched to a wireless keyboard and mouse and it unhooks from linux and rehooks in the VM flawlessly so I do not need a spare keyboard and mouse, just wanted to mention it
 * also gpu audio work flawlessly
 * also passing a usb bluetooth adapter works along with paring with something like headphones or a headset or smartphone
+* [4/18/2022] I got s usb sound card that works in both linux and windows, so I just pass it to the VM so I can use my headphones and mic
 
 ## Final words
 So to make a summary, well, it took some time to get right, but that is my config, all the apps, scripts and tools that I installed and set up let me use my PC as a Gaming rig or a Workstation power house. However this config may not work for everyone, so make sure to do your own research, just in case. This is meant to be a template, not a final solution, but here might be some things that may end up working for you. I also custom built ffmpeg, but I am not sure if I should include it, in this build. I might at a later date.

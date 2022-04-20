@@ -961,6 +961,14 @@ Connection successful
 ```
 For more information go here https://wiki.archlinux.org/title/bluetooth_headset#Headset_via_Bluez5/PulseAudio
 
+## Enable Ultimate Performance Mode in Windows 10
+1. Search for Command Prompt in the Start menu.
+2. Right-click the Command Prompt result.
+3. Choose “Run As Administrator.”
+4. In Command Prompt window, type the following command:
+    `powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61`
+5. Press Enter.
+
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
 * make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support

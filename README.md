@@ -203,6 +203,7 @@ sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 sudo systemctl restart libvirtd
 sudo virsh net-start default
+sudo virsh net-autostart default
 ```
 The install will ask to replace a tables package just say yes and you are good to go.
 

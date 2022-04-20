@@ -87,6 +87,12 @@ ListenAddress 192.168.1.115
 ```
 sudo systemctl restart sshd
 ```
+```
+sudo nano /etc/hosts.allow
+```
+```
+SSHD: ALL
+```
 installing discord, steam and other gaming stuff
 ```
 sudo pacman -S steam discord lutris --noconfirm

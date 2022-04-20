@@ -98,7 +98,9 @@ SSHD: ALL
 sudo nano restart-sshd.sh
 ```
 ```
-systemctl enable sshd.service
+pass="not_gonna_dox_myself"
+sleep 10
+echo $pass | sudo -S systemctl restart sshd
 ```
 create an autostart option in Autostart settings menu and add a Login script, navigate to the script that we created and add it, next click on properties and make sure it is executable and that everyone can wiev and execute the script, also in the command section make sure to add `bash` at the beginning like so
 

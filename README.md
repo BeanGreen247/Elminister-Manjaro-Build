@@ -94,15 +94,21 @@ sudo nano /etc/hosts.allow
 ```
 SSHD: ALL
 ```
+```
+sudo nano restart-sshd.sh
+```
+```
+systemctl enable sshd.service
+```
 create an autostart option in Autostart settings menu and add a Login script, navigate to the script that we created and add it, next click on properties and make sure it is executable and that everyone can wiev and execute the script, also in the command section make sure to add `bash` at the beginning like so
 
 `bash /home/beangreen247/restart-sshd.sh`
 
 make sure to change the location of the script based on your setup
 
-installing discord, steam and other gaming stuff
+installing discord
 ```
-sudo pacman -S steam discord lutris --noconfirm
+sudo pacman -S discord --noconfirm
 ```
 installing aditional packages
 ```

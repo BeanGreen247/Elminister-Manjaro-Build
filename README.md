@@ -196,6 +196,7 @@ sudo pacman -S virt-manager qemu vde2 iptables-nft dnsmasq bridge-utils openbsd-
 sudo systemctl enable libvirtd
 sudo systemctl start libvirtd
 sudo systemctl restart libvirtd
+sudo virsh net-start default
 ```
 The install will ask to replace a tables package just say yes and you are good to go.
 
@@ -209,7 +210,7 @@ Steps on creating a VM in virtual machine manager
 4. CPUs: 8
 5. Create a disk image for the VM: 256GiB (if you have a spare ssd you can pass it here)
 6. Tick Customize config before install
-7. Select NIC and change Network source to Bridge device and give the device name in my case eno1, that can be found using ip addr
+7. Select NIC and change Network source to Virtual network 'default' NAT
 8. Click add Hardware and add storage
     select or create custom
     

@@ -960,7 +960,6 @@ For more information go here https://wiki.archlinux.org/title/bluetooth_headset#
 * make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support
 * make sure to reboot the vm
 * after all that make a copy of the VM, so that if something goes wrong, you have something to restore from
-* to be able to talk with the boys on discord i have passed a heaset/mic combo via a usb bluetooth adapter
 * ~~also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux,~~ i use a wireless keyboard and mouse with 2 wireless receivers, one per dev
     *  I should mention that I just recently switched to a wireless keyboard and mouse and it unhooks from linux and rehooks in the VM flawlessly
 * also gpu audio work flawlessly

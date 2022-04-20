@@ -213,7 +213,7 @@ Steps on creating a VM in virtual machine manager
     
 1. Pick Manual install
 2. Choose the OS you are installing: Microsoft Windows 10 (win10)
-3. RAM: 16385
+3. RAM: 24576
 4. CPUs: 8
 5. Create a disk image for the VM: 256GiB (if you have a spare ssd you can pass it here)
 6. Tick Customize config before install

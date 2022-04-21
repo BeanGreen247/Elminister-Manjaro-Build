@@ -223,6 +223,8 @@ make sure to change the location of the script based on your setup
 
 the script that we added at startup/on login will set the cpu scaling governor to performance once in linux
 
+to check run `cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor`
+
 ## what is next?
 we will look into more performace improvements and tweaks, this VM is used for video editing and gaming if the game is proprietary and has anticheat software or drm built in.
 

@@ -198,14 +198,16 @@ set-option -g default-shell /bin/zsh
 performance-mode.sh
 ```bash
 #!/bin/bash
+pass="not_gonna_dox_myself"
+sleep 3
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo "performance" > $file; done
+for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo $pass | sudo -S echo "performance" & echo $pass | sudo -S !! > $file; done
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
 to run use sudo for root access
 
 Some info
-* performance-mode.sh - to enable performace cpu governor
+* performance-mode.sh - to enable performace cpu governor, will be added to autostart at startup
 
 ## what is next?
 we will look into more performace improvements and tweaks, this VM is used for video editing and gaming if the game is proprietary and has anticheat software or drm built in.

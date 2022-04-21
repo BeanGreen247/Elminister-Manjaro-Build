@@ -198,16 +198,30 @@ set-option -g default-shell /bin/zsh
 performance-mode.sh
 ```bash
 #!/bin/bash
-pass="not_gonna_dox_myself"
-sleep 3
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo $pass | sudo -S echo "performance" & echo $pass | sudo -S !! > $file; done
+for file in /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor; do echo "performance" > $file; done
 cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 ```
-to run use sudo for root access
+to run use sudo for root access this will be done at startup with the following script
+```
+nano execute-performance-mode-sh-as-root.sh
+```
+```
+sleep 3
+chmod +x performance-mode.sh
+echo $pass | sudo -S bash performance-mode.sh
+```
 
 Some info
 * performance-mode.sh - to enable performace cpu governor, will be added to autostart at startup
+
+create an autostart option in Autostart settings menu and add a Login script, navigate to the script that we created and add it, next click on properties and make sure it is executable and that everyone can wiev and execute the script, also in the command section make sure to add `bash` at the beginning like so
+
+`bash /home/beangreen247/execute-performance-mode-sh-as-root.sh`
+
+make sure to change the location of the script based on your setup
+
+the script that we added at startup/on login will set the cpu scaling governor to performance once in linux
 
 ## what is next?
 we will look into more performace improvements and tweaks, this VM is used for video editing and gaming if the game is proprietary and has anticheat software or drm built in.

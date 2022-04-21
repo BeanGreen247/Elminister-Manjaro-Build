@@ -971,6 +971,11 @@ For more information go here https://wiki.archlinux.org/title/bluetooth_headset#
     `powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61`
 5. Press Enter.
 
+## Enable Windows Features
+Make sure that the following ones are enabled and that they have a checkmark next to them
+![windows_features.png](https://raw.githubusercontent.com/BeanGreen247/Elminister-Manjaro-Build/main/windows_features.png)
+Next reboot to apply the changes.
+
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
 * make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support

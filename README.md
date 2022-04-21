@@ -877,6 +877,26 @@ You may need to change the XML based on your topology
 
 now try and test it
 
+```
+sudo nano reassign-cpu.sh
+```
+```
+pass="not_gonna_dox_myself"
+sleep 3
+echo $pass | sudo -S systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
+sleep 3
+echo $pass | sudo -S systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
+sleep 3
+echo $pass | sudo -S systemctl set-property --runtime -- init.scope AllowedCPUs=0-11
+```
+create an autostart option in Autostart settings menu and add a Login script, navigate to the script that we created and add it, next click on properties and make sure it is executable and that everyone can wiev and execute the script, also in the command section make sure to add `bash` at the beginning like so
+
+`bash /home/beangreen247/reassign-cpu.sh`
+
+make sure to change the location of the script based on your setup
+
+the srpipt that we added at startup/on login will reassing cpu cores back to linux
+
 ## Step 10
 Bluetooth stuff
 

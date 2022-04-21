@@ -895,7 +895,7 @@ create an autostart option in Autostart settings menu and add a Login script, na
 
 make sure to change the location of the script based on your setup
 
-the srpipt that we added at startup/on login will reassing cpu cores back to linux
+the script that we added at startup/on login will reassing cpu cores back to linux
 
 ## Step 10
 Bluetooth stuff

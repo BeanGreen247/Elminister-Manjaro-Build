@@ -211,7 +211,9 @@ sleep 3
 chmod +x performance-mode.sh
 echo $pass | sudo -S bash performance-mode.sh
 ```
-
+```
+chmod +x execute-performance-mode-sh-as-root.sh
+```
 Some info
 * performance-mode.sh - to enable performace cpu governor, will be added to autostart at startup
 

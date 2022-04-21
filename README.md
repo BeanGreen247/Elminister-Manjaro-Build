@@ -974,6 +974,7 @@ For more information go here https://wiki.archlinux.org/title/bluetooth_headset#
 ## Enable Windows Features
 Make sure that the following ones are enabled and that they have a checkmark next to them
 ![windows_features.png](https://raw.githubusercontent.com/BeanGreen247/Elminister-Manjaro-Build/main/windows_features.png)
+
 Next reboot to apply the changes.
 
 ## Some notes

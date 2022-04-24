@@ -796,13 +796,28 @@ run this command `ls -l /dev/input/by-id`
 take note of the link like so (this is in my case)
 ```
 total 0
-lrwxrwxrwx 1 root root 10  6. dub 16.48 usb-KYE_Systems_Corp._FaceCam_1000X-event-if00 -> ../event21
-lrwxrwxrwx 1 root root 10  6. dub 16.48 usb-ShanWan_Controller_XBOX_360_For_Windows-event-joystick -> ../event18
-lrwxrwxrwx 1 root root  6  6. dub 16.48 usb-ShanWan_Controller_XBOX_360_For_Windows-joystick -> ../js0
-lrwxrwxrwx 1 root root 10  6. dub 16.48 usb-Telink_Wireless_Receiver-event-if00 -> ../event24
-lrwxrwxrwx 1 root root 10  6. dub 16.48 usb-Telink_Wireless_Receiver-event-mouse -> ../event22
-lrwxrwxrwx 1 root root 10  6. dub 16.48 usb-Telink_Wireless_Receiver-if01-event-kbd -> ../event25
-lrwxrwxrwx 1 root root  9  6. dub 16.48 usb-Telink_Wireless_Receiver-mouse -> ../mouse0
+lrwxrwxrwx 1 root root  9 24. dub 22.07 usb-1bcf_USB_Optical_Mouse-event-mouse -> ../event5
+lrwxrwxrwx 1 root root  9 24. dub 22.07 usb-1bcf_USB_Optical_Mouse-mouse -> ../mouse0
+lrwxrwxrwx 1 root root 10 24. dub 22.02 usb-C-Media_Electronics_Inc._USB_Advanced_Audio_Device-event-if03 -> ../event18
+lrwxrwxrwx 1 root root 10 24. dub 22.02 usb-KYE_Systems_Corp._FaceCam_1000X-event-if00 -> ../event19
+lrwxrwxrwx 1 root root 10 24. dub 22.02 usb-ShanWan_Controller_XBOX_360_For_Windows-event-joystick -> ../event20
+lrwxrwxrwx 1 root root  6 24. dub 22.02 usb-ShanWan_Controller_XBOX_360_For_Windows-joystick -> ../js0
+lrwxrwxrwx 1 root root  9 24. dub 22.05 usb-Usb_KeyBoard_Usb_KeyBoard-event-kbd -> ../event4
+```
+
+xml file changes
+```
+///at the top of the file change it to this
+<domain xmlns:qemu="http://libvirt.org/schemas/domain/qemu/1.0" type="kvm">
+//near the bottom
+</devices>
+  <qemu:commandline>
+    <qemu:arg value='-object'/>
+    <qemu:arg value='input-linux,id=kbd,evdev=/dev/input/event4,grab_all=on,repeat=on'/>
+    <qemu:arg value='-object'/>
+    <qemu:arg value='input-linux,id=mouse,evdev=/dev/input/event5'/>
+  </qemu:commandline>
+</domain>
 ```
 
 Permissions

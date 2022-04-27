@@ -1017,6 +1017,12 @@ Make sure that the following ones are enabled and that they have a checkmark nex
 
 Next reboot to apply the changes.
 
+## Change device installation settings
+The reason is to prevent windows from downloading new drivers, well new old drivers, when the internet is detected
+
+1. Search for change device installation settings
+2. Select No (your device might not work as expected)
+
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
 * make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support

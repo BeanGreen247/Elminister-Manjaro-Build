@@ -249,7 +249,7 @@ Steps on creating a VM in virtual machine manager
 1. Pick Manual install
 2. Choose the OS you are installing: Microsoft Windows 10 (win10)
 3. RAM: 26624
-4. CPUs: 8
+4. CPUs: 10
 5. Create a disk image for the VM: 256GiB (if you have a spare ssd you can pass it here)
 6. Tick Customize config before install
 7. Select NIC and change Network source to Virtual network 'default' NAT
@@ -320,7 +320,7 @@ replace
 with
 ```
 <cpu mode="host-passthrough" check="none" migratable="on">
- <topology sockets="1" dies="1" cores="4" threads="2"/>
+ <topology sockets="1" dies="1" cores="5" threads="2"/>
  <feature policy='disable' name='hypervisor'/>
 </cpu>
 ```
@@ -867,9 +867,9 @@ add this at the end of the file
 command=$2
 
 if [ "$command" = "started" ]; then
-    systemctl set-property --runtime -- system.slice AllowedCPUs=0,1,6,7
-    systemctl set-property --runtime -- user.slice AllowedCPUs=0,1,6,7
-    systemctl set-property --runtime -- init.scope AllowedCPUs=0,1,6,7
+    systemctl set-property --runtime -- system.slice AllowedCPUs=0,6
+    systemctl set-property --runtime -- user.slice AllowedCPUs=0,6
+    systemctl set-property --runtime -- init.scope AllowedCPUs=0,6
 elif [ "$command" = "release" ]; then
     systemctl set-property --runtime -- system.slice AllowedCPUs=0-11
     systemctl set-property --runtime -- user.slice AllowedCPUs=0-11
@@ -878,20 +878,22 @@ fi
 ```
 and this is what it looks like in the xml
 ```
-  <vcpu placement="static">8</vcpu>
+<vcpu placement="static">10</vcpu>
   <iothreads>1</iothreads>
   <cputune>
-    <vcpupin vcpu='0' cpuset='2'/>
-    <vcpupin vcpu='1' cpuset='3'/>
-    <vcpupin vcpu='2' cpuset='4'/>
-    <vcpupin vcpu='3' cpuset='5'/>
-    <vcpupin vcpu='4' cpuset='8'/>
-    <vcpupin vcpu='5' cpuset='9'/>
-    <vcpupin vcpu='6' cpuset='10'/>
-    <vcpupin vcpu='7' cpuset='11'/>
-    <emulatorpin cpuset='0,6'/>
-    <iothreadpin iothread='1' cpuset='0,6'/>
-</cputune>
+    <vcpupin vcpu="0" cpuset="1"/>
+    <vcpupin vcpu="1" cpuset="2"/>
+    <vcpupin vcpu="2" cpuset="3"/>
+    <vcpupin vcpu="3" cpuset="4"/>
+    <vcpupin vcpu="4" cpuset="5"/>
+    <vcpupin vcpu="5" cpuset="7"/>
+    <vcpupin vcpu="6" cpuset="8"/>
+    <vcpupin vcpu="7" cpuset="9"/>
+    <vcpupin vcpu="8" cpuset="10"/>
+    <vcpupin vcpu="9" cpuset="11"/>
+    <emulatorpin cpuset="0,6"/>
+    <iothreadpin iothread="1" cpuset="0,6"/>
+  </cputune>
 ```
 You may need to change the XML based on your topology
 

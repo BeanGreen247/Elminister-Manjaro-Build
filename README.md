@@ -1026,8 +1026,9 @@ The reason is to prevent windows from downloading new drivers, well new old driv
 2. Select No (your device might not work as expected)
 
 ## Some notes
-* once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
-* make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support
+* ~~once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that~~
+* nake sure to install the drivers via .ini files aand go one dir by one in here `C:\AMD\AMD-Software-Adrenalin-Edition-22.4.2-Win10-Win11-April25\Packages\Drivers`
+* ~~make sure to do a driver CLEAN INSTALL from drivers, and reboot the VM to get full speed and DX support~~
 * make sure to reboot the vm
 * after all that make a copy of the VM, so that if something goes wrong, you have something to restore from
 * ~~also make sure you have a spare keyboard and mouse for the VM and pass it as well since the main pair will stay with linux,~~ i use a wireless keyboard and mouse with 2 wireless receivers, one per dev

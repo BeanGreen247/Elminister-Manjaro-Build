@@ -1025,6 +1025,16 @@ The reason is to prevent windows from downloading new drivers, well new old driv
 1. Search for change device installation settings
 2. Select No (your device might not work as expected)
 
+## Disable Fullscreen Optimizations via Registry Editor
+Besides disabling fullscreen optimizations via Settings, you can also choose to disable fullscreen optimizations via Registry Editor.
+
+1. Press Windows key and R key together to open Run dialog.
+2. Type regedit in the box and click OK to continue.
+3. In the Registry Editor window, navigate to the HKEY_CURRENT_USER\System\GameConfigStore folder. 
+4. Then right-click on the right side and choose New > DWORD (32-bit) value to continue.
+5. Name it as the GameDVR_FSEBehavior.
+6. Then double-click it to change its value data. Set its value data to 2 to disable fullscreen optimizations feature.
+
 ## Some notes
 * once you boot it up for the first time make sure to install your gpu drivers to get DX12/11/10.1/10/9/8 and vulkan support and install all redist stuff like visual c++ and stuff like that
 * nake sure to install the drivers via .ini files aand go one dir by one in here `C:\AMD\AMD-Software-Adrenalin-Edition-22.4.2-Win10-Win11-April25\Packages\Drivers`
